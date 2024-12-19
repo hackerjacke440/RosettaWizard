@@ -1,126 +1,146 @@
-/* Apply Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* Import custom font for a retro feel */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 html {
-    background-color: #2c2f3d; /* Dark mystical background */
-    font-family: 'Roboto', sans-serif; /* Clean, readable font */
+    background-color: #181818; /* Darker background for a better contrast */
+    font-family: 'Press Start 2P', cursive; /* Retro pixel font */
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Root container with grid layout */
 #root {
-    width: 320px; /* Keep small container width */
-    height: 400px; /* Maintain compact height */
+    width: 320px;
+    height: 480px; /* Adjusted height for better balance */
     display: grid;
     grid-template:
         "err err err err" 1fr
-        "top top top top" 3fr
-        "tim tim tim tim" 2fr
+        "top top top top" 2fr
+        "tim tim tim tim" 1.5fr
         "val val cle cle" 2fr
         "ext ext ext ext" 40px
         / 1fr 1fr 1fr 1fr;
-    border-radius: 15px; /* Slightly rounded corners */
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    background: linear-gradient(145deg, #4f5b74, #1c2130); /* Mystic gradient */
+    gap: 15px; /* Increased gap for spacing */
+    padding: 15px; /* Adjusted padding for balance */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #2D2D2D; /* Slightly lighter background to contrast the text */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Depth with shadows */
 }
 
+/* Error banner */
 .error-banner {
     grid-area: err;
-    background-color: #9b59b6; /* Purple for mystical error */
-    color: white;
-    padding: 5px;
-    text-align: center;
-    height: 0;
-    overflow: hidden;
+    background-color: #E74C3C; /* Slightly adjusted color for better visibility */
+    color: #FFF;
     transition: height 0.2s ease-in-out;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .error-banner.active {
-    height: 40px;
     padding: 10px;
+    height: 50px; /* Increased height for better readability */
 }
 
+/* Top section */
 .top {
     grid-area: top;
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
-    color: #f1c40f; /* Magical gold for the title */
-    font-size: 20px;
-    font-weight: 700;
-    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.6); /* Glowing effect */
+    color: #7FDBFF; /* Light blue for a cool effect */
+    font-size: 1.3em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Subtle text shadow for better readability */
 }
 
-.time-form,
-.validate-form,
-.clear-cache {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Time form */
 .time-form {
     grid-area: tim;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Validation form */
 .validate-form {
     grid-area: val;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.validate-form button,
-.clear-cache button {
-    padding: 10px 20px;
-    background-color: #8e44ad; /* Deep purple for buttons */
+/* Validate button styling */
+.validate-form button {
+    padding: 15px 30px;
+    background-color: #2ECC71; /* Soft green for buttons */
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow for depth */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
 }
 
-.validate-form button:hover,
+.validate-form button:hover {
+    background-color: #27AE60; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
+}
+
+/* Clear cache section */
+.clear-cache {
+    grid-area: cle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Clear cache button styling */
+.clear-cache button {
+    padding: 15px 30px;
+    background-color: #F39C12; /* Amber color for the button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow for depth */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
+}
+
 .clear-cache button:hover {
-    background-color: #9b59b6; /* Lighter purple on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    background-color: #F1C40F; /* Lighter amber on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
 }
 
-.validate-form button:active,
-.clear-cache button:active {
-    transform: scale(1); /* Reset zoom on click */
-}
-
+/* Warning text */
 p.warning-form {
-    color: #f39c12; /* Warm amber gold for warnings */
+    color: white;
     text-align: center;
     font-style: italic;
-    font-size: 14px;
+    font-size: 0.9em;
 }
 
+/* Extra bar section */
 div.extra-bar {
     grid-area: ext;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background: #34495e; /* Mystical silver-gray background */
-    padding: 10px 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    justify-content: space-evenly;
+    font-size: 1.1em;
 }
 
-div.extra-bar > * {
-    color: #ecf0f1; /* Light silver for text */
-    font-size: 14px;
-    font-weight: 500;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease;
+/* General button styling for all sections */
+button {
+    font-family: 'Press Start 2P', cursive; /* Ensure retro font is applied to buttons */
+    transition: transform 0.2s ease-in-out;
 }
 
-div.extra-bar > *:hover {
-    background-color: #2ecc71; /* Magical green on hover */
-    transform: translateY(-3px); /* Lift effect on hover */
+/* Enhance focus state for accessibility */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #3498DB; /* Blue focus ring */
 }
