@@ -8964,7 +8964,7 @@ function App() {
   return /* @__PURE__ */ We.createElement(We.Fragment, null, /* @__PURE__ */ We.createElement("div", { className: "top" }, /* @__PURE__ */ We.createElement("h1", null, "Rosetta Wizard")), /* @__PURE__ */ We.createElement(ErrorBanner_default, { error }), /* @__PURE__ */ We.createElement(TimeForm, { service, onError: setError }), /* @__PURE__ */ We.createElement(ValidateForm, { service, onError: setError }), /* @__PURE__ */ We.createElement("div", { className: "clear-cache" }, /* @__PURE__ */ We.createElement("button", { onClick: onClearCache }, "clear cache")), /* @__PURE__ */ We.createElement("div", { className: "extra-bar" }, /* @__PURE__ */ We.createElement(
     react_github_btn_default,
     {
-      href: "https://github.com/hlnajz/rosettaWizard",
+      href: "https://github.com/hackerjacke440/RosettaWizard/stargazers",
       "data-color-scheme": "no-preference: dark; light: light; dark: dark;",
       "data-icon": "octicon-star",
       "data-size": "large",
@@ -8972,7 +8972,7 @@ function App() {
       "aria-label": "Star hlnajz/rosettaWizard on GitHub"
     },
     "Star"
-  ), /* @__PURE__ */ We.createElement(react_github_btn_default, { href: "https://github.com/hlnajz/rosettaWizard/issues", "data-color-scheme": "no-preference: dark; light: light; dark: dark;", "data-icon": "octicon-issue-opened", "data-size": "large", "data-show-count": "true", "aria-label": "Issue hlnajz/rosettaWizard on GitHub" }, "Issue")));
+  ), /* @__PURE__ */ We.createElement(react_github_btn_default, { href: "https://github.com/hackerjacke440/RosettaWizard/issues", "data-color-scheme": "no-preference: dark; light: light; dark: dark;", "data-icon": "octicon-issue-opened", "data-size": "large", "data-show-count": "true", "aria-label": "Issue hlnajz/rosettaWizard on GitHub" }, "Issue")));
 }
 var root = document.querySelector("#root");
 v.createRoot(root).render(/* @__PURE__ */ We.createElement(App, null));
