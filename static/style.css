@@ -1,0 +1,126 @@
+/* Apply Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+html {
+    background-color: #2c2f3d; /* Dark mystical background */
+    font-family: 'Roboto', sans-serif; /* Clean, readable font */
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    width: 320px; /* Keep small container width */
+    height: 400px; /* Maintain compact height */
+    display: grid;
+    grid-template:
+        "err err err err" 1fr
+        "top top top top" 3fr
+        "tim tim tim tim" 2fr
+        "val val cle cle" 2fr
+        "ext ext ext ext" 40px
+        / 1fr 1fr 1fr 1fr;
+    border-radius: 15px; /* Slightly rounded corners */
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    background: linear-gradient(145deg, #4f5b74, #1c2130); /* Mystic gradient */
+}
+
+.error-banner {
+    grid-area: err;
+    background-color: #9b59b6; /* Purple for mystical error */
+    color: white;
+    padding: 5px;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out;
+}
+
+.error-banner.active {
+    height: 40px;
+    padding: 10px;
+}
+
+.top {
+    grid-area: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f1c40f; /* Magical gold for the title */
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.6); /* Glowing effect */
+}
+
+.time-form,
+.validate-form,
+.clear-cache {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-form {
+    grid-area: tim;
+}
+
+.validate-form {
+    grid-area: val;
+}
+
+.validate-form button,
+.clear-cache button {
+    padding: 10px 20px;
+    background-color: #8e44ad; /* Deep purple for buttons */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.validate-form button:hover,
+.clear-cache button:hover {
+    background-color: #9b59b6; /* Lighter purple on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.validate-form button:active,
+.clear-cache button:active {
+    transform: scale(1); /* Reset zoom on click */
+}
+
+p.warning-form {
+    color: #f39c12; /* Warm amber gold for warnings */
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+}
+
+div.extra-bar {
+    grid-area: ext;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #34495e; /* Mystical silver-gray background */
+    padding: 10px 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+div.extra-bar > * {
+    color: #ecf0f1; /* Light silver for text */
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+div.extra-bar > *:hover {
+    background-color: #2ecc71; /* Magical green on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
